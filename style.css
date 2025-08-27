@@ -1,5 +1,6 @@
 .container {
     display: flex;
+    padding-right: 5px;
     width: 70%;
     height: 350px;
     margin: 100px auto;
@@ -8,12 +9,15 @@
 }
 .section1{
 background-color: hsl(31, 77%, 52%);
+ margin-right:10px;
 }
 .section2 {
 background-color: hsl(184, 100%, 22%);
+margin-right:10px;
 }
 .section3 {
 background-color: hsl(179, 100%, 13%);
+margin-right:10px;
 }
 button{
     border-radius: 9px;
@@ -30,29 +34,26 @@ button>a{
 }
 @media(max-width:600px) {
     .container {
-    display: flex;
-    width: 70%;
-    height: 350px;
-    margin: 100px auto;
-    border-radius: 3px;
-    overflow: hidden;
-    flex-direction: column;
+    flex-direction: row;
+    height: 390px;
+    width: 90%;
 }
   
-.section1{
-    background-color: brown;
-}
-.section2 {
-    background-color: blue;
-}
-.section3 {
-    background-color: blueviolet;
+.section1,.section2,.section3{
+    flex: 1;
 }
 button {
-    width: 100%;
-    border-radius: 12px;
-    border: none;
+     width: auto;
+        padding: 10px 20px;
+        margin-top: 20px;
 }
+}
+
+@media (max-width:1024) {
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 
